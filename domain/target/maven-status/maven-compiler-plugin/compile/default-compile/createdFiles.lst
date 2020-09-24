@@ -1,0 +1,4 @@
+com\sadjoumoumouni\demo\hexagon\domain\product\entity\Product.class
+com\sadjoumoumouni\demo\hexagon\domain\product\entity\Product$ProductBuilder.class
+com\sadjoumoumouni\demo\hexagon\domain\product\ports\DataPersistencePort.class
+com\sadjoumoumouni\demo\hexagon\domain\product\exception\DoesNotExistException.class

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sadjoumoumouni.demo.hexagon</groupId>
+    <artifactId>hexagonal-architecture-demo</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>domain</module>
+        <module>adapters</module>
+        <module>core</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <lombok.version>1.18.6</lombok.version>
+        <springboot.version>5.2.9.RELEASE</springboot.version>
+        <maven.complier.version>3.8.1</maven.complier.version>
+        <java.version>11</java.version>
+        <springboot.version>2.3.4.RELEASE</springboot.version>
+        <org.springframework.version>5.2.9.RELEASE</org.springframework.version>
+    </properties>
+
+
+</project>
