@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = "com.sadjoumoumouni.demo.hexagon.adapters.product.drivens")
 @EntityScan(basePackages = "com.sadjoumoumouni.demo.hexagon.domain")
 public class SpringbootappApplication {
 
