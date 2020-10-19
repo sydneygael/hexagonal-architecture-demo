@@ -1,16 +1,17 @@
 package com.sadjoumoumouni.demo.hexagon.adapters.product.drivens;
 
-import com.sadjoumoumouni.demo.hexagon.domain.product.entity.Product;
-import com.sadjoumoumouni.demo.hexagon.domain.product.ports.DataPersistencePort;
-import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
+import com.sadjoumoumouni.demo.hexagon.domain.product.entity.Product;
+import com.sadjoumoumouni.demo.hexagon.domain.product.ports.ProductPersistencePort;
+
 @Component
-public class InMemoryPersistenceAdapter implements DataPersistencePort {
+public class InMemoryPersistenceAdapter implements ProductPersistencePort {
 
     private final Map<String, Product> inMemoryDb = new HashMap<String, Product>();
 

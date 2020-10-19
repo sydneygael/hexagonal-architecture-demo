@@ -1,17 +1,18 @@
 package com.sadjoumoumouni.demo.hexagon.adapters.product.drivens;
 
 
-import com.sadjoumoumouni.demo.hexagon.adapters.product.drivens.jpa.repository.ProductJpaRepository;
-import com.sadjoumoumouni.demo.hexagon.domain.product.entity.Product;
-import com.sadjoumoumouni.demo.hexagon.domain.product.exception.DoesNotExistException;
-import com.sadjoumoumouni.demo.hexagon.domain.product.ports.DataPersistencePort;
+import java.util.List;
+
 import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
+import com.sadjoumoumouni.demo.hexagon.adapters.product.drivens.jpa.repository.ProductJpaRepository;
+import com.sadjoumoumouni.demo.hexagon.domain.product.entity.Product;
+import com.sadjoumoumouni.demo.hexagon.domain.product.exception.DoesNotExistException;
+import com.sadjoumoumouni.demo.hexagon.domain.product.ports.ProductPersistencePort;
 
 @Component
-public class JpaPersistenceAdapter implements DataPersistencePort {
+public class JpaPersistenceAdapter implements ProductPersistencePort {
 
     private final ProductJpaRepository productJpaRepository;
 
@@ -30,7 +31,7 @@ public class JpaPersistenceAdapter implements DataPersistencePort {
     }
 
     @Override
-    public boolean deleteProduct(Product product) {
+    public boolean deleteProduct(Product product) throws DoesNotExistException {
         try {
             productJpaRepository.delete(product);
             return true;

@@ -1,4 +1,4 @@
-package com.sadjoumoumouni.demo.hexagon.domain.product.entity;
+package com.sadjoumoumouni.demo.hexagon.domain.user.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,20 +16,22 @@ import lombok.NonNull;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="products")
-public class Product {
-
+@Table(name="users")
+public class User {
     @Id
-    @Column
-    private String id;
-
-    @Column
     @NonNull
-    private String description;
-
     @Column
+    private String userId;
+
     @NonNull
-    private Double price;
+    @Column
+    private String name;
 
+    @NonNull
+    @Column
+    private String email;
 
+    @NonNull
+    @Column
+    private Double money;
 }
