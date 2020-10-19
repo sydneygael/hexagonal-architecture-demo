@@ -1,8 +1,8 @@
-package com.sadjoumoumouni.demo.hexagon.core.service.product;
-
-import com.sadjoumoumouni.demo.hexagon.domain.product.entity.Product;
+package com.sadjoumoumouni.demo.hexagon.core.product;
 
 import java.util.List;
+
+import com.sadjoumoumouni.demo.hexagon.domain.product.entity.Product;
 
 public interface ProductService {
 

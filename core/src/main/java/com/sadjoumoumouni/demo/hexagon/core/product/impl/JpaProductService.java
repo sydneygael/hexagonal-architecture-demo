@@ -1,15 +1,16 @@
-package com.sadjoumoumouni.demo.hexagon.core.service.product.impl;
+package com.sadjoumoumouni.demo.hexagon.core.product.impl;
 
-import com.sadjoumoumouni.demo.hexagon.adapters.product.drivens.JpaPersistenceAdapter;
-import com.sadjoumoumouni.demo.hexagon.adapters.product.drivens.jpa.repository.ProductJpaRepository;
-import com.sadjoumoumouni.demo.hexagon.core.service.product.ProductService;
-import com.sadjoumoumouni.demo.hexagon.domain.product.entity.Product;
-import com.sadjoumoumouni.demo.hexagon.domain.product.ports.DataPersistencePort;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import com.sadjoumoumouni.demo.hexagon.adapters.product.drivens.JpaPersistenceAdapter;
+import com.sadjoumoumouni.demo.hexagon.adapters.product.drivens.jpa.repository.ProductJpaRepository;
+import com.sadjoumoumouni.demo.hexagon.core.product.ProductService;
+import com.sadjoumoumouni.demo.hexagon.domain.product.entity.Product;
+import com.sadjoumoumouni.demo.hexagon.domain.product.ports.DataPersistencePort;
 
 @Service
 @Transactional

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sadjoumoumouni.demo.hexagon.core.service.product.ProductService;
+import com.sadjoumoumouni.demo.hexagon.core.product.service.ProductService;
 import com.sadjoumoumouni.demo.hexagon.domain.product.entity.Product;
 
 @RestController

@@ -11,9 +11,9 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Primary;
 
 import com.sadjoumoumouni.demo.hexagon.adapters.product.drivens.jpa.repository.ProductJpaRepository;
-import com.sadjoumoumouni.demo.hexagon.core.service.product.ProductService;
-import com.sadjoumoumouni.demo.hexagon.core.service.product.impl.InMemoryProductService;
-import com.sadjoumoumouni.demo.hexagon.core.service.product.impl.JpaProductService;
+import com.sadjoumoumouni.demo.hexagon.core.product.service.ProductService;
+import com.sadjoumoumouni.demo.hexagon.core.product.service.impl.InMemoryProductService;
+import com.sadjoumoumouni.demo.hexagon.core.product.service.impl.JpaProductService;
 import com.sadjoumoumouni.demo.hexagon.springbootapp.controller.SpringProductController;
 
 import springfox.documentation.builders.ApiInfoBuilder;
