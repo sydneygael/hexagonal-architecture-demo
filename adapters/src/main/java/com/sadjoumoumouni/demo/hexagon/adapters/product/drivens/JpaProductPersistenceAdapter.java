@@ -12,11 +12,11 @@ import com.sadjoumoumouni.demo.hexagon.domain.product.exception.DoesNotExistExce
 import com.sadjoumoumouni.demo.hexagon.domain.product.ports.ProductPersistencePort;
 
 @Component
-public class JpaPersistenceAdapter implements ProductPersistencePort {
+public class JpaProductPersistenceAdapter implements ProductPersistencePort {
 
     private final ProductJpaRepository productJpaRepository;
 
-    public JpaPersistenceAdapter(ProductJpaRepository productJpaRepository) {
+    public JpaProductPersistenceAdapter(ProductJpaRepository productJpaRepository) {
         this.productJpaRepository = productJpaRepository;
     }
 

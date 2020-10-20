@@ -17,7 +17,9 @@ import com.sadjoumoumouni.demo.hexagon.domain.product.ports.ProductPersistencePo
 import com.sadjoumoumouni.demo.hexagon.domain.user.entity.HandleMoneyCommand;
 import com.sadjoumoumouni.demo.hexagon.domain.user.entity.User;
 
-public class ProductFacade implements CreateOperationsProduct, ReadOperationsProduct, UpdateOperationsProduct, DeleteOperationsProduct, BuyProductUseCase {
+public class ProductFacade implements
+        CreateOperationsProduct, ReadOperationsProduct, UpdateOperationsProduct, DeleteOperationsProduct,
+        BuyProductUseCase {
 
     private final ProductPersistencePort productPersistencePort;
     private final UserFacade userFacade;
@@ -44,7 +46,7 @@ public class ProductFacade implements CreateOperationsProduct, ReadOperationsPro
 
     @Override
     public List<Product> getAllProducts() {
-        return this.getAllProducts();
+        return productPersistencePort.getAllProducts();
     }
 
     @Override

@@ -12,25 +12,32 @@ import com.sadjoumoumouni.demo.hexagon.domain.user.ports.UserPersistencePort;
 
 public class UserFacade implements AddNewUser, GetUsers, UpdateMoney {
 
-    UserPersistencePort userPersistencePort;
+    private final UserPersistencePort userPersistencePort;
+
+    public UserFacade(final UserPersistencePort userPersistencePort) {
+        this.userPersistencePort = userPersistencePort;
+    }
 
     @Override
     public List<User> getAllUsers() {
-        return null;
+        return userPersistencePort.getAllUsers();
     }
 
     @Override
     public Optional<User> getUserById(String userId) {
-        return null;
+        return getAllUsers().stream().filter(user -> user.getUserId().equals(userId)).findAny();
     }
 
     @Override
     public User addNewUser(User user) {
-        return null;
+        return userPersistencePort.addNewUser(user);
     }
 
     @Override
     public boolean udpateMoney(HandleMoneyCommand command) {
-        return false;
+        Optional<User> userById = getUserById(command.getUserId());
+        userById.ifPresent( user -> user.setMoney(command.getMoney()));
+        userPersistencePort.updateUserInfos(userById.get());
+        return true;
     }
 }

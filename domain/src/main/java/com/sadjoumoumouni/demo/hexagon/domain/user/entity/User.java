@@ -20,7 +20,6 @@ import lombok.NonNull;
 public class User {
     @Id
     @NonNull
-    @Column
     private String userId;
 
     @NonNull

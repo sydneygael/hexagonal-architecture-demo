@@ -8,10 +8,10 @@ CREATE TABLE products (
 );
 
 CREATE TABLE users (
-  userId INT AUTO_INCREMENT  PRIMARY KEY,
+  user_id INT AUTO_INCREMENT  PRIMARY KEY,
   name VARCHAR(250) NOT NULL,
   email VARCHAR(250) NOT NULL,
-  fortune DOUBLE NOT NULL
+  money DOUBLE NOT NULL
 );
 
 INSERT INTO products (description,price) VALUES
@@ -19,6 +19,6 @@ INSERT INTO products (description,price) VALUES
   ('lait',2.5),
   ('gateau',5);
 
-INSERT INTO users (name,email,fortune) VALUES
+INSERT INTO users (name,email,money) VALUES
   ('dangote','dangote@example.com',2000),
   ('sydney','sydney@example.com',10);

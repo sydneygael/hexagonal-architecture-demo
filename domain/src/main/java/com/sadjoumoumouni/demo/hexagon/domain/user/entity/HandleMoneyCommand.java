@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 @Builder
 public class HandleMoneyCommand {
     private String userId;
-    private Double fortune;
+    private Double money;
 }
