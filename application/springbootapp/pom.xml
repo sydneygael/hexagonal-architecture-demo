@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>11</java.version>
+        <maven.versions.plugin>2.8.1</maven.versions.plugin>
     </properties>
 
     <dependencies>
@@ -88,11 +89,11 @@
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
+        <!-- to manage version -->
         <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>javax.ws.rs-api</artifactId>
-            <version>2.1.1</version>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>versions-maven-plugin</artifactId>
+            <version>${maven.versions.plugin}</version>
         </dependency>
     </dependencies>
 
@@ -102,6 +103,11 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.4.RELEASE</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${maven.versions.plugin}</version>
             </plugin>
         </plugins>
     </build>
